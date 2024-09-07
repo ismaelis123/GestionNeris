@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NerisGestion</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div id="menu">
+        <button onclick="toggleMenu()">☰ Menú</button>
+        <div id="menu-content">
+            <h2>Estadísticas por Empresa</h2>
+            <div id="stats">
+                <h3>Avon</h3>
+                <ul id="avon-list"></ul>
+                <h3>Scentia</h3>
+                <ul id="scentia-list"></ul>
+                <h3>Zermat</h3>
+                <ul id="zermat-list"></ul>
+                <h3>Ventas por Fecha</h3>
+                <ul id="sales-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <h1>NerisGestion</h1>
+        <form id="client-form">
+            <input type="text" id="client-name" placeholder="Nombre del Cliente" required>
+            <input type="number" id="client-debt" placeholder="Monto de la Deuda" required>
+            <select id="company">
+                <option value="Avon">Avon</option>
+                <option value="Scentia">Scentia</option>
+                <option value="Zermat">Zermat</option>
+            </select>
+            <button type="submit">Agregar Cliente</button>
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Deuda</th>
+                    <th>Estado</th>
+                    <th>Empresa</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="client-list">
+                <!-- Los clientes se mostrarán aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
